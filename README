@@ -20,4 +20,4 @@ ead_rules.sch: Schematron 1.5 schema to demonstrate rules checking of EAD instan
 
 extend-with-nvdl: demonstration of use of NVDL to extend EAD by allowing elements from external namespaces
 
-stripns.xsl: XSLT 2.0 stylesheet for converting EAD 2002 RNG-valid or XSD-valid instance to HTML using the eadcbs8.xsl stylesheet [must rename!]
+stripns.xsl: XSLT 2.0 stylesheet for converting EAD 2002 RNG-valid or XSD-valid instance to HTML using the eadcbs8.xsl stylesheet (though any EAD(DTD) to XML stylesheet could be used)
