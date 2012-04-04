@@ -1,1 +1,29 @@
-test
+strip-ns
+=========
+
+XSLT 2.0 Stylesheets for removing input EAD instances from any namespaces for further processing
+
+CONTENTS
+---------
+
+* strip-ns.xsl: XSLT 2.0 stylesheet for converting EAD 2002 RNG-valid or XSD-valid instance to HTML using the eadcbs8.xsl stylesheet (though any EAD(DTD) to XML stylesheet could be used)
+
+The stylesheet processes a EAD (XSD/RNG) input instance through namespace-stripping stripping templates (mode="strip-ns"), then the namespace-stripped instance is processed by the templates in the included EAD (DTD) to HTML stylesheet (here eadcbs8.xsl).
+
+** eadcbs8.xsl: used by strip-ns.xsl to demonstrate conversion of EAD to HTML
+
+** dsc4.xsl: included by eadcbs8.xsl
+
+* strip-ns_standalone.xsl: XSLT 2.0 stylesheet for removing all namespaces from any input XML file
+
+Basically the 'mode="strip-ns"' templates from strip-ns.xsl. Outputs namespace stripped copy of input instance rather than passing it off for further processing in a variable.
+
+CAVEATS
+-------
+
+The strip-ns.xsl stylesheet does not currently do any conversion of EAD 2002 RNG and XSD features to their DTD equivalents (e.g., xlink attributes). Templates for these can be added (and will be forthcoming).
+
+AUTHOR
+-------
+
+Terry Catapano
