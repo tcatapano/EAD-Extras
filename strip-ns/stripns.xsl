@@ -18,7 +18,9 @@
     </xsl:variable>
     <!-- match against input document root and process namespace stripped instance in parameter -->
     <xsl:template match="/">
-        <xsl:message select="$instance-ns-stripped"/>
+        <!-- Remove comment to send $instance-ns-stripped to stderr for debugging
+            <xsl:message select="$instance-ns-stripped"/>
+         -->
         <xsl:for-each select="$instance-ns-stripped">
             <xsl:apply-templates/>
         </xsl:for-each>
